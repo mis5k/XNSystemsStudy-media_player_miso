@@ -134,6 +134,17 @@ var File1 = (function () {
     }
     return File1;
 }());
+/*
+function openFile(file) {
+   if (file.format == 'mp3' || file.format == 'wmv') {
+        return new Music(file.name);
+   } else if (file.format == 'mp4' || file.format == 'mkv') {
+        return new Video(file.name);
+   } else if (file.format == 'jpg' || file.format == 'png') {
+        return new Image1(file.name);
+   }
+}
+*/
 var global = {
     file: null,
     player: null,
@@ -177,12 +188,23 @@ var a = new File1("a", "mp3", 100);
 var b = new File1("b", "mkv", 300);
 var c = new File1("c", "png", 200);
 //let list:File1[] = [a, b, b];
+/*
+let opendfile = openFile(a);
+opendfile.play();
+opendfile.setVolume(20);
+opendfile = openFile(b);
+opendfile.play();
+opendfile.setMute(true);
+opendfile = openFile(c);
+opendfile.play();
+opendfile.setZoom(true);
+*/
 global.openFile(a);
 global.player.play();
 global.player.setVolume(20);
 global.openFile(b);
 global.player.play();
 global.player.setMute(true);
-//global.player = global.openFile(c);
-//global.player.play();
-//global.player.setZoom(true);
+global.player = global.openFile(c);
+global.player.play();
+global.player.setZoom(true);
