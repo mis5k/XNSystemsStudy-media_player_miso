@@ -223,6 +223,6 @@ global.openFile(b);
 global.player.play();
 global.player.setMute(true);
 
-global.player = global.openFile(c);
-global.player.play();
-global.player.setZoom(true);
+//global.player = global.openFile(c);
+//global.player.play();
+//global.player.setZoom(true);
